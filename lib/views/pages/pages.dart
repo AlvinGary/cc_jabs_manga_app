@@ -14,3 +14,8 @@ part 'splash.dart';
 part 'login.dart';
 part 'home.dart';
 part 'regis.dart';
+part 'popular.dart';
+part 'latest.dart';
+part 'search.dart';
+part 'library.dart';
+part 'navbarview.dart';
