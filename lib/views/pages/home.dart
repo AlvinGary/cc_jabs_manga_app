@@ -10,6 +10,21 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Home"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            Divider(thickness: 2, color: Colors.black),
+            Container(
+              child: Text("Popular"),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
