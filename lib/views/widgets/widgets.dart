@@ -5,4 +5,3 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 part 'uitoast.dart';
 part 'uiloading.dart';
-part 'menubar.dart';
