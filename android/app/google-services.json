@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "880734668858",
+    "project_id": "wowmangaapp",
+    "storage_bucket": "wowmangaapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880734668858:android:5c6fca6ea1d36a88878d03",
+        "android_client_info": {
+          "package_name": "com.example.cc_jabs_manga_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880734668858-53l9u90onteiskqg4ubodtmccn2l6rlt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cc_jabs_manga_app",
+            "certificate_hash": "60f692f5295713e97effbaff832b58cff50c7ce5"
+          }
+        },
+        {
+          "client_id": "880734668858-2su5v1va05ttbgqhkrd9ap3m87u17rr6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDns2sPd8L2Pl-L6zquXdJhZY60AcId-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880734668858-2su5v1va05ttbgqhkrd9ap3m87u17rr6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
