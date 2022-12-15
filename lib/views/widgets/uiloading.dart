@@ -9,7 +9,7 @@ class UiLoading {
       color: Colors.transparent,
       child: const SpinKitFadingCircle(
         size: 50,
-        color: Color.fromARGB(255, 255, 195, 85),
+        color: Colors.orange,
       ),
     );
   }
@@ -22,7 +22,7 @@ class UiLoading {
       color: Colors.transparent,
       child: const SpinKitFadingCircle(
         size: 30,
-        color: Color.fromARGB(255, 255, 191, 0),
+        color: Colors.orange,
       ),
     );
   }
@@ -35,7 +35,7 @@ class UiLoading {
       color: Colors.black12,
       child: const SpinKitFadingCircle(
         size: 50,
-        color: Color.fromARGB(255, 255, 191, 0),
+        color: Colors.orange,
       ),
     );
   }
