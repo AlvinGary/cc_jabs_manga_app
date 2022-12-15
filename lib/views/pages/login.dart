@@ -38,104 +38,38 @@ class _LoginPageState extends State<LoginPage> {
       body: Stack(
         children: [
           Container(
-            // color: Colors.orange,
             width: double.infinity,
-            height: 400,
-            padding: EdgeInsets.fromLTRB(16, 16, 16, 16),
-            child: Center(
-              child: Form(
-                key: _loginkey,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    TextFormField(
-                      keyboardType: TextInputType.emailAddress,
-                      autovalidateMode: AutovalidateMode.onUserInteraction,
-                      controller: ctrlEmail,
-                      decoration: InputDecoration(
-                        labelText: "Email",
-                        prefixIcon: Icon(Icons.mail),
-                        border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(12))),
-                      ),
-                      validator: (value) {
-                        return !EmailValidator.validate(value.toString())
-                            ? 'Email is not valid!'
-                            : null;
-                      },
-                    ),
-                    SizedBox(height: 32),
-                    TextFormField(
-                      obscureText: isHide,
-                      autovalidateMode: AutovalidateMode.onUserInteraction,
-                      controller: ctrlPass,
-                      decoration: InputDecoration(
-                        labelText: "Password",
-                        prefixIcon: Icon(Icons.lock),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(12)),
-                        ),
-                        suffixIcon: new GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              isHide = !isHide;
-                            });
-                          },
-                          child: Icon(
-                            isHide ? Icons.visibility : Icons.visibility_off,
-                          ),
-                        ),
-                      ),
-                      validator: (value) {
-                        return value!.length < 6
-                            ? "Password must at least 6 characters!"
-                            : null;
-                      },
-                    ),
-                    SizedBox(height: 42),
-                    Container(
-                      width: double.infinity,
-                      child: ElevatedButton(
-                          onPressed: () async {
-                            // signOut();
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => MenuPage()));
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.orange,
-                            elevation: 0,
-                            textStyle: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            padding: EdgeInsets.fromLTRB(24, 14, 24, 12),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                          ),
-                          child: Text("LOGIN")),
-                    ),
-                    SizedBox(height: 16),
-                    Align(
-                      alignment: Alignment(0, 0.89),
-                      child: GestureDetector(
-                        onTap: () async {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => RegisPage()));
-                        },
-                        child: Text(
-                          "Don't have account? Sign up here!",
-                          style: TextStyle(color: Colors.blue, fontSize: 14),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+            child: ElevatedButton.icon(
+              onPressed: () async {
+                await AuthService.signInWithGoogle().then((value) {
+                  Fluttertoast.showToast(
+                      msg: "Welcome Back",
+                      toastLength: Toast.LENGTH_LONG,
+                      gravity: ToastGravity.BOTTOM,
+                      backgroundColor: Colors.green,
+                      textColor: Colors.white,
+                      fontSize: 14);
+                  ;
+                });
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
+              },
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  elevation: 3,
+                  textStyle: TextStyle(fontSize: 16),
+                  shadowColor: Colors.green,
+                  padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  )),
+              label: Text(
+                'Sign In with Google',
+                style: TextStyle(color: Colors.green),
+              ),
+              icon: FaIcon(
+                FontAwesomeIcons.google,
+                color: Colors.green,
               ),
             ),
           ),
