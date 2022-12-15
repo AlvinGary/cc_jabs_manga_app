@@ -14,7 +14,6 @@ import '../../models/models.dart';
 part 'splash.dart';
 part 'login.dart';
 part 'home.dart';
-part 'regis.dart';
 part 'popular.dart';
 part 'latest.dart';
 part 'search.dart';
