@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:cc_jabs_manga_app/services/services.dart';
-import 'package:cc_jabs_manga_app/views/Widgets/widgets.dart';
+
 import 'package:cc_jabs_manga_app/views/widgets/widgets.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
