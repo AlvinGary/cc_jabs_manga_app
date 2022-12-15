@@ -70,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HomePage()));
+                                  builder: (context) => MenuPage()));
                         },
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
