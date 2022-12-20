@@ -46,16 +46,25 @@ class _LoginPageState extends State<LoginPage> {
                     Container(
                       width: double.infinity,
                       child: ElevatedButton(
-                          onPressed: () async {},
+                          onPressed: () async {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MenuPage()));
+                          },
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue,
-                              elevation: 0,
-                              textStyle: TextStyle(fontSize: 16),
+                              backgroundColor: Colors.orange[50],
+                              elevation: 3,
+                              shadowColor: Colors.orange,
+                              textStyle: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
                               padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(16),
                               )),
-                          child: Text('Sign In')),
+                          child: Text('Login as Guest')),
                     ),
                     SizedBox(height: 16),
                     Divider(thickness: 2),
@@ -73,21 +82,24 @@ class _LoginPageState extends State<LoginPage> {
                                   builder: (context) => MenuPage()));
                         },
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.white,
-                            elevation: 3,
+                            backgroundColor: Colors.orange,
+                            elevation: 5,
                             textStyle: TextStyle(fontSize: 16),
-                            shadowColor: Colors.green,
+                            shadowColor: Colors.black,
                             padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(16),
                             )),
                         label: Text(
                           'Sign In with Google',
-                          style: TextStyle(color: Colors.green),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
                         ),
                         icon: FaIcon(
                           FontAwesomeIcons.google,
-                          color: Colors.green,
+                          color: Colors.white,
                         ),
                       ),
                     ),
@@ -103,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Text("Belum Punya Akun ? Daftar di Sini !",
                   style: TextStyle(
                     color: Colors.blue,
-                    fontSize: 16,
+                    fontSize: 14,
                   )),
             ),
           )
