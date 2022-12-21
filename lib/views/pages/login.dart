@@ -28,7 +28,10 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sign In"),
+        title: Text(
+          "Login",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
       ),
       body: Stack(
@@ -36,15 +39,29 @@ class _LoginPageState extends State<LoginPage> {
           Container(
             width: double.infinity,
             height: double.infinity,
-            padding: EdgeInsets.all(24),
+            padding: EdgeInsets.fromLTRB(24, 48, 24, 0),
             child: Center(
               child: Form(
                 key: _loginKey,
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Container(
+                      padding: EdgeInsets.all(20),
+                      child: Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Text(
+                            "Welcome to Wow! Manga You can get your Daily Manga here!",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.orange[600],
+                                fontSize: 26,
+                                fontWeight: FontWeight.bold),
+                          )),
+                    ),
+                    SizedBox(height: 16),
+                    Container(
                       width: double.infinity,
+                      padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
                       child: ElevatedButton(
                           onPressed: () async {
                             Navigator.pushReplacement(
@@ -57,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                               elevation: 3,
                               shadowColor: Colors.orange,
                               textStyle: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: 18,
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold),
                               padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
@@ -71,6 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(height: 16),
                     Container(
                       width: double.infinity,
+                      padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
                       child: ElevatedButton.icon(
                         onPressed: () async {
                           await AuthService.signInWithGoogle().then((value) {
@@ -108,17 +126,6 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          Align(
-            alignment: Alignment(0, 0.96),
-            child: GestureDetector(
-              onTap: () {},
-              child: Text("Belum Punya Akun ? Daftar di Sini !",
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontSize: 14,
-                  )),
-            ),
-          )
         ],
       ),
     );
