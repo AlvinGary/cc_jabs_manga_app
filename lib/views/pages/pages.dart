@@ -18,4 +18,5 @@ part 'popular.dart';
 part 'latest.dart';
 part 'search.dart';
 part 'library.dart';
-part 'navbarview.dart';
+part 'menu.dart';
+part 'profile.dart';
