@@ -39,7 +39,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ? Container(
                   width: double.infinity,
                   height: double.infinity,
-                  padding: EdgeInsets.all(24),
+                  padding: EdgeInsets.fromLTRB(24, 0, 24, 32),
                   child: Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -56,9 +56,25 @@ class _ProfilePageState extends State<ProfilePage> {
                         SizedBox(
                           height: 24,
                         ),
+                        Container(
+                          padding: EdgeInsets.only(left: 4),
+                          alignment: Alignment.centerLeft,
+                          child: Text("Username",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
                         TextField(
                           readOnly: true,
                           decoration: InputDecoration(
+                            enabledBorder: const OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                  color: Colors.black87, width: 2),
+                            ),
                             border: OutlineInputBorder(),
                             labelStyle:
                                 TextStyle(color: Colors.black, fontSize: 20),
@@ -69,10 +85,26 @@ class _ProfilePageState extends State<ProfilePage> {
                         SizedBox(
                           height: 16,
                         ),
+                        Container(
+                          padding: EdgeInsets.only(left: 4),
+                          alignment: Alignment.centerLeft,
+                          child: Text("Email",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
                         TextField(
                           readOnly: true,
                           obscureText: true,
                           decoration: InputDecoration(
+                            enabledBorder: const OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                  color: Colors.black87, width: 2),
+                            ),
                             border: OutlineInputBorder(),
                             labelStyle:
                                 TextStyle(color: Colors.black, fontSize: 20),
