@@ -7,6 +7,8 @@ class SearchPage extends StatefulWidget {
   _SearchPageState createState() => _SearchPageState();
 }
 
+final searchController = TextEditingController();
+
 class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
@@ -15,8 +17,17 @@ class _SearchPageState extends State<SearchPage> {
         title: Text("Search"),
       ),
       body: Container(
-        child: Center(
-          child: Text("Search Page"),
+        padding: EdgeInsets.fromLTRB(16, 16, 16, 24),
+        child: TextField(
+          controller: searchController,
+          decoration: InputDecoration(
+            suffixIcon: const Icon(Icons.search),
+            hintText: "Search",
+            border: OutlineInputBorder(
+              borderSide: const BorderSide(
+                        color: Colors.black87, width: 2),
+            ),
+          ),
         ),
       ),
     );

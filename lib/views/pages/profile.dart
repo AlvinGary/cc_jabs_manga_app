@@ -70,6 +70,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         ),
                         TextField(
                           readOnly: true,
+                          enabled: false,
                           decoration: InputDecoration(
                             enabledBorder: const OutlineInputBorder(
                               borderSide: const BorderSide(
@@ -99,7 +100,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         ),
                         TextField(
                           readOnly: true,
-                          obscureText: true,
+                          enabled: false,
                           decoration: InputDecoration(
                             enabledBorder: const OutlineInputBorder(
                               borderSide: const BorderSide(
@@ -131,6 +132,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         ),
                         TextField(
                           readOnly: true,
+                          enabled: false,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             labelText: "Username",
@@ -141,7 +143,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         ),
                         TextField(
                           readOnly: true,
-                          obscureText: true,
+                          enabled: false,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             labelText: "Email",
