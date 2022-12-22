@@ -1,0 +1,16 @@
+{
+    "id": "0022d62d-6d9d-48bd-a153-316420b813d5",
+    "attributes": {
+        "volume": "27",
+        "chapter": "236",
+        "title": "Reencuentro",
+        "translatedLanguage": "es-la",
+        "updatedAt": "2022-06-30T20:40:56+00:00"
+    },
+    "relationships": [
+        {
+            "id": "0b77aae7-43a9-4f18-8692-5feb2c8c62f1",
+            "type": "scanlation_group"
+        }
+    ]
+}
