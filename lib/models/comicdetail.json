@@ -1,0 +1,71 @@
+{
+    "data": {
+        "id": "77bee52c-d2d6-44ad-a33a-1734c1fe696a",
+        "type": "manga",
+        "attributes": {
+            "title": {
+                "ja-ro": "Kage no Jitsuryokusha ni Naritakute"
+            },
+            "altTitles": [
+                {
+                    "en": "The Eminence in Shadow"
+                },
+                {
+                    "en": "To Be a Power in the Shadows!"
+                },
+                {
+                    "ru": "Восхождение в тени"
+                },
+                {
+                    "ja": "陰の実力者になりたくて！"
+                },
+                {
+                    "ko": "숨은 실력자가 되고싶어서"
+                }
+            ],
+            "description": {
+                "en": "Just like how everyone adored heroes in their childhood, a certain young man adored those powers hidden in shadows. Ninjas, rogues, shadowy mentor types, that sort of deal.  \r\nAfter hiding his strength and living the mediocre life of a NPC by day while undergoing frenzied training by night, he finally reincarnates into a different world and gains ultimate power.  \r\nThe young man who is only pretending to be a power in the shadows… his subordinates who took him more seriously than he expected… and a giant organization in the shadows that gets accidentally trampled…  \r\nThis is the story of a young boy who had adored powers in shadows possibly eventually reigning over the world of shadows in another world."
+            },
+            "status": "ongoing",
+            "year": 2018,
+            "tags": [
+                {
+                    "attributes": {
+                        "name": {
+                            "en": "Reincarnation"
+                        }
+                    }
+                },
+                {
+                    "attributes": {
+                        "name": {
+                            "en": "Action"
+                        }
+                    }
+                }
+            ]
+        },
+        "relationships": [
+            {
+                "id": "c6c278e1-268b-4b7b-84ec-3289bd0c08f0",
+                "type": "author"
+            },
+            {
+                "id": "a1746c35-50ed-4e6f-94c1-092b07440d59",
+                "type": "artist"
+            },
+            {
+                "id": "c659e82a-8730-4fcd-8755-772dbce479ce",
+                "type": "cover_art",
+                "attributes": {
+                    "fileName": "4d709522-25f5-4ac0-9b6c-3798a223c7ae.jpg"
+                }
+            },
+            {
+                "id": "fc4eede2-4fc9-4fdc-8904-7ea7ae56d773",
+                "type": "manga",
+                "related": "side_story"
+            }
+        ]
+    }
+}
