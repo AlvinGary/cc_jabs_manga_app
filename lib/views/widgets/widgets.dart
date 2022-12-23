@@ -9,3 +9,4 @@ import '../../shared/shared.dart';
 part 'uitoast.dart';
 part 'uiloading.dart';
 part 'uicard.dart';
+part 'uicard2.dart';
