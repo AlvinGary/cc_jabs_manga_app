@@ -12,7 +12,7 @@ class _PopularPageState extends State<PopularPage> {
   int offset = 0;
 
   Future<List<ListComic>> fetchListComic(offset) async {
-    await MangadexService.getListComic(offset).then((value) {
+    await MangadexService.getListPopularComic(offset).then((value) {
       if (value.isNotEmpty) {
         setState(() {
           listComic.addAll(value);
@@ -50,6 +50,11 @@ class _PopularPageState extends State<PopularPage> {
                 bool isTop = metrics.pixels == 0;
                 if (isTop) {
                   print('At the top');
+                  setState(() {
+                    listComic.clear();
+                    offset = 0;
+                    fetchListComic(offset);
+                  });
                 } else {
                   print('At the bottom');
                   setState(() {
