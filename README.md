@@ -1,4 +1,4 @@
-## cc_jabs_manga_app
+## Wow! Manga
 Manga/Comic Reader App.
 
 Using MangaDex API And Our Own Library API.
