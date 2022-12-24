@@ -1,14 +1,14 @@
 part of 'widgets.dart';
 
-class CardView extends StatefulWidget {
+class LatestCardView extends StatefulWidget {
   final ListComic listComic;
-  const CardView(this.listComic, {Key? key}) : super(key: key);
+  const LatestCardView(this.listComic, {Key? key}) : super(key: key);
 
   @override
-  State<CardView> createState() => _CardViewState();
+  State<LatestCardView> createState() => _LatestCardViewState();
 }
 
-class _CardViewState extends State<CardView> {
+class _LatestCardViewState extends State<LatestCardView> {
   @override
   Widget build(BuildContext context) {
     ListComic listComic = widget.listComic;
@@ -41,20 +41,20 @@ class _CardViewState extends State<CardView> {
         child: InkWell(
           onTap: () {},
           child: Container(
-              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+              padding: EdgeInsets.fromLTRB(8, 10, 8, 0),
               color: Colors.orange,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Flexible(
-                    flex: 5,
+                    flex: 10,
                     child: CachedNetworkImage(
                       imageUrl:
                           'https://${coverUrl}/${listComic.id}/${filename}.256.jpg',
                       imageBuilder: (context, imageProvider) => Container(
+                        width: 130,
                         height: 150,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
                             image: imageProvider,
                             fit: BoxFit.cover,
@@ -68,12 +68,34 @@ class _CardViewState extends State<CardView> {
                   ),
                   Flexible(
                     flex: 1,
-                    child: Text(
-                      listComic.attributes!.title!.en ?? title ?? 'No Title',
-                      // overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 10,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(2, 4, 2, 0),
+                      child: Text(
+                        listComic.attributes!.title!.en ?? title ?? 'No Title',
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Spacer(),
+                  Flexible(
+                    flex: 1,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 2, 0, 2),
+                      child: Text(
+                        "Latest Chapter: ${listComic.attributes!.lastChapter ?? 'No Chapter'}",
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 11,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
