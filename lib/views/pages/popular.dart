@@ -77,7 +77,7 @@ class _PopularPageState extends State<PopularPage> {
               itemBuilder: (context, index) {
                 return LazyLoadingList(
                   loadMore: () {},
-                  child: CardView(listComic[index]),
+                  child: PopularCardView(listComic[index]),
                   index: index,
                   hasMore: true,
                 );

@@ -1,14 +1,14 @@
 part of 'widgets.dart';
 
-class CardViewLatest extends StatefulWidget {
+class PopularCardView extends StatefulWidget {
   final ListComic listComic;
-  const CardViewLatest(this.listComic, {Key? key}) : super(key: key);
+  const PopularCardView(this.listComic, {Key? key}) : super(key: key);
 
   @override
-  State<CardViewLatest> createState() => _CardViewLatestState();
+  State<PopularCardView> createState() => _PopularCardViewState();
 }
 
-class _CardViewLatestState extends State<CardViewLatest> {
+class _PopularCardViewState extends State<PopularCardView> {
   @override
   Widget build(BuildContext context) {
     ListComic listComic = widget.listComic;
@@ -36,28 +36,27 @@ class _CardViewLatestState extends State<CardViewLatest> {
         elevation: 5,
         color: Colors.orange,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(12),
         ),
         child: InkWell(
           onTap: () {},
           child: Container(
-              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+              padding: EdgeInsets.fromLTRB(8, 10, 8, 0),
               color: Colors.orange,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Flexible(
-                    flex: 10,
+                    flex: 4,
                     child: CachedNetworkImage(
                       imageUrl:
                           'https://${coverUrl}/${listComic.id}/${filename}.256.jpg',
                       imageBuilder: (context, imageProvider) => Container(
-                        height: 150,
+                        width: 130,
+                        height: 180,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
                             image: imageProvider,
-                            fit: BoxFit.cover,
+                            fit: BoxFit.fitHeight,
                           ),
                         ),
                       ),
@@ -67,25 +66,19 @@ class _CardViewLatestState extends State<CardViewLatest> {
                     ),
                   ),
                   Flexible(
-                    flex: 4,
-                    child: Text(
-                      listComic.attributes!.title!.en ?? title ?? 'No Title',
-                      // overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 10,
-                      ),
-                    ),
-                  ),
-                  Spacer(),
-                  Flexible(
-                    flex: 1,
-                    child: Text(
-                      "Latest Chapter: ${listComic.attributes!.lastChapter ?? 'No Chapter'}",
-                      // overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 10,
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                      child: Text(
+                        listComic.attributes!.title!.en ?? title ?? 'No Title',
+                        overflow: TextOverflow.fade,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                          height: 1,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
