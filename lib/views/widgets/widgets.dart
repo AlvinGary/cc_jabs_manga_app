@@ -10,3 +10,4 @@ part 'uitoast.dart';
 part 'uiloading.dart';
 part 'popularcard.dart';
 part 'latestcard.dart';
+part 'latestcardhome.dart';

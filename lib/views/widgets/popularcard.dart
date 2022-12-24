@@ -33,57 +33,58 @@ class _PopularCardViewState extends State<PopularCardView> {
       }
     }
     return Card(
-        elevation: 5,
-        color: Colors.orange,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+      elevation: 5,
+      color: Colors.orange,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: InkWell(
+        onTap: () {},
+        child: Container(
+          padding: EdgeInsets.fromLTRB(8, 10, 8, 0),
+          color: Colors.orange,
+          child: Column(
+            children: [
+              Flexible(
+                flex: 4,
+                child: CachedNetworkImage(
+                  imageUrl:
+                      'https://${coverUrl}/${listComic.id}/${filename}.256.jpg',
+                  imageBuilder: (context, imageProvider) => Container(
+                    width: 130,
+                    height: 180,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: imageProvider,
+                        fit: BoxFit.fitHeight,
+                      ),
+                    ),
+                  ),
+                  placeholder: (context, url) => UiLoading.loadingDD(),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
+                ),
+              ),
+              Flexible(
+                flex: 2,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                  child: Text(
+                    listComic.attributes!.title!.en ?? title ?? 'No Title',
+                    overflow: TextOverflow.fade,
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12,
+                      height: 1,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
-        child: InkWell(
-          onTap: () {},
-          child: Container(
-              padding: EdgeInsets.fromLTRB(8, 10, 8, 0),
-              color: Colors.orange,
-              child: Column(
-                children: [
-                  Flexible(
-                    flex: 4,
-                    child: CachedNetworkImage(
-                      imageUrl:
-                          'https://${coverUrl}/${listComic.id}/${filename}.256.jpg',
-                      imageBuilder: (context, imageProvider) => Container(
-                        width: 130,
-                        height: 180,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: imageProvider,
-                            fit: BoxFit.fitHeight,
-                          ),
-                        ),
-                      ),
-                      placeholder: (context, url) => UiLoading.loadingDD(),
-                      errorWidget: (context, url, error) =>
-                          const Icon(Icons.error),
-                    ),
-                  ),
-                  Flexible(
-                    flex: 2,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
-                      child: Text(
-                        listComic.attributes!.title!.en ?? title ?? 'No Title',
-                        overflow: TextOverflow.fade,
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 12,
-                          height: 1,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-                ],
-              )),
-        ));
+      ),
+    );
   }
 }

@@ -41,49 +41,50 @@ class _PopularPageState extends State<PopularPage> {
         title: Text("Popular"),
       ),
       body: Container(
-          height: double.infinity,
-          width: double.infinity,
-          child: NotificationListener<ScrollEndNotification>(
-            onNotification: (scrollEnd) {
-              final metrics = scrollEnd.metrics;
-              if (metrics.atEdge) {
-                bool isTop = metrics.pixels == 0;
-                if (isTop) {
-                  print('At the top');
-                  setState(() {
-                    listComic.clear();
-                    offset = 0;
-                    fetchListComic(offset);
-                  });
-                } else {
-                  print('At the bottom');
-                  setState(() {
-                    offset += 20;
-                    fetchListComic(offset);
-                  });
-                }
+        height: double.infinity,
+        width: double.infinity,
+        child: NotificationListener<ScrollEndNotification>(
+          onNotification: (scrollEnd) {
+            final metrics = scrollEnd.metrics;
+            if (metrics.atEdge) {
+              bool isTop = metrics.pixels == 0;
+              if (isTop) {
+                print('At the top');
+                setState(() {
+                  listComic.clear();
+                  offset = 0;
+                  fetchListComic(offset);
+                });
+              } else {
+                print('At the bottom');
+                setState(() {
+                  offset += 20;
+                  fetchListComic(offset);
+                });
               }
-              return true;
+            }
+            return true;
+          },
+          child: GridView.builder(
+            itemCount: listComic.length,
+            scrollDirection: Axis.vertical,
+            padding: EdgeInsets.all(10),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                crossAxisSpacing: 3,
+                mainAxisSpacing: 3,
+                childAspectRatio: 9 / 16),
+            itemBuilder: (context, index) {
+              return LazyLoadingList(
+                loadMore: () {},
+                child: PopularCardView(listComic[index]),
+                index: index,
+                hasMore: true,
+              );
             },
-            child: GridView.builder(
-              itemCount: listComic.length,
-              scrollDirection: Axis.vertical,
-              padding: EdgeInsets.all(10),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 3,
-                  mainAxisSpacing: 3,
-                  childAspectRatio: 9 / 16),
-              itemBuilder: (context, index) {
-                return LazyLoadingList(
-                  loadMore: () {},
-                  child: PopularCardView(listComic[index]),
-                  index: index,
-                  hasMore: true,
-                );
-              },
-            ),
-          )),
+          ),
+        ),
+      ),
     );
   }
 }
