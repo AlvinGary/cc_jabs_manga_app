@@ -4,4 +4,5 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 part 'uitoast.dart';
+part 'uicard.dart';
 part 'uiloading.dart';
