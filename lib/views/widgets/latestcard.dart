@@ -1,14 +1,14 @@
 part of 'widgets.dart';
 
-class CardViewLatest extends StatefulWidget {
+class LatestCardView extends StatefulWidget {
   final ListComic listComic;
-  const CardViewLatest(this.listComic, {Key? key}) : super(key: key);
+  const LatestCardView(this.listComic, {Key? key}) : super(key: key);
 
   @override
-  State<CardViewLatest> createState() => _CardViewLatestState();
+  State<LatestCardView> createState() => _LatestCardViewState();
 }
 
-class _CardViewLatestState extends State<CardViewLatest> {
+class _LatestCardViewState extends State<LatestCardView> {
   @override
   Widget build(BuildContext context) {
     ListComic listComic = widget.listComic;
@@ -41,7 +41,7 @@ class _CardViewLatestState extends State<CardViewLatest> {
         child: InkWell(
           onTap: () {},
           child: Container(
-              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+              padding: EdgeInsets.fromLTRB(8, 10, 8, 0),
               color: Colors.orange,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -52,9 +52,9 @@ class _CardViewLatestState extends State<CardViewLatest> {
                       imageUrl:
                           'https://${coverUrl}/${listComic.id}/${filename}.256.jpg',
                       imageBuilder: (context, imageProvider) => Container(
+                        width: 130,
                         height: 150,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
                             image: imageProvider,
                             fit: BoxFit.cover,
@@ -67,25 +67,35 @@ class _CardViewLatestState extends State<CardViewLatest> {
                     ),
                   ),
                   Flexible(
-                    flex: 4,
-                    child: Text(
-                      listComic.attributes!.title!.en ?? title ?? 'No Title',
-                      // overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 10,
+                    flex: 1,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(2, 4, 2, 0),
+                      child: Text(
+                        listComic.attributes!.title!.en ?? title ?? 'No Title',
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
                   Spacer(),
                   Flexible(
                     flex: 1,
-                    child: Text(
-                      "Latest Chapter: ${listComic.attributes!.lastChapter ?? 'No Chapter'}",
-                      // overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 10,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 2, 0, 2),
+                      child: Text(
+                        "Latest Chapter: ${listComic.attributes!.lastChapter ?? 'No Chapter'}",
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 11,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),

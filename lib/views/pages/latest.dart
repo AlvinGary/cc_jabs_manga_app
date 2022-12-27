@@ -34,7 +34,6 @@ class _LatestPageState extends State<LatestPage> {
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,7 +77,7 @@ class _LatestPageState extends State<LatestPage> {
               itemBuilder: (context, index) {
                 return LazyLoadingList(
                   loadMore: () {},
-                  child: CardViewLatest(listComic[index]),
+                  child: LatestCardView(listComic[index]),
                   index: index,
                   hasMore: true,
                 );
@@ -88,4 +87,3 @@ class _LatestPageState extends State<LatestPage> {
     );
   }
 }
-
