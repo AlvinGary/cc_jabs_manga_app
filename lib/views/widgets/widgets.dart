@@ -11,3 +11,4 @@ part 'uiloading.dart';
 part 'popularcard.dart';
 part 'latestcard.dart';
 part 'latestcardhome.dart';
+part 'genrecard.dart';
