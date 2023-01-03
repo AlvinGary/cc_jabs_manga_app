@@ -28,7 +28,10 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sign In"),
+        title: Text(
+          "Login",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
       ),
       body: Stack(
@@ -36,32 +39,56 @@ class _LoginPageState extends State<LoginPage> {
           Container(
             width: double.infinity,
             height: double.infinity,
-            padding: EdgeInsets.all(24),
+            padding: EdgeInsets.fromLTRB(24, 48, 24, 0),
             child: Center(
               child: Form(
                 key: _loginKey,
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Container(
+                      padding: EdgeInsets.all(20),
+                      child: Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Text(
+                            "Welcome to Wow! Manga You can get your Daily Manga here!",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.orange[600],
+                                fontSize: 26,
+                                fontWeight: FontWeight.bold),
+                          )),
+                    ),
+                    SizedBox(height: 16),
+                    Container(
                       width: double.infinity,
+                      padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
                       child: ElevatedButton(
-                          onPressed: () async {},
+                          onPressed: () async {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MenuPage()));
+                          },
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue,
-                              elevation: 0,
-                              textStyle: TextStyle(fontSize: 16),
+                              backgroundColor: Colors.orange[50],
+                              elevation: 3,
+                              shadowColor: Colors.orange,
+                              textStyle: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
                               padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(16),
                               )),
-                          child: Text('Sign In')),
+                          child: Text('Login as Guest')),
                     ),
                     SizedBox(height: 16),
                     Divider(thickness: 2),
                     SizedBox(height: 16),
                     Container(
                       width: double.infinity,
+                      padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
                       child: ElevatedButton.icon(
                         onPressed: () async {
                           await AuthService.signInWithGoogle().then((value) {
@@ -73,21 +100,24 @@ class _LoginPageState extends State<LoginPage> {
                                   builder: (context) => MenuPage()));
                         },
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.white,
-                            elevation: 3,
+                            backgroundColor: Colors.orange,
+                            elevation: 5,
                             textStyle: TextStyle(fontSize: 16),
-                            shadowColor: Colors.green,
+                            shadowColor: Colors.black,
                             padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(16),
                             )),
                         label: Text(
                           'Sign In with Google',
-                          style: TextStyle(color: Colors.green),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
                         ),
                         icon: FaIcon(
                           FontAwesomeIcons.google,
-                          color: Colors.green,
+                          color: Colors.white,
                         ),
                       ),
                     ),
@@ -96,17 +126,6 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          Align(
-            alignment: Alignment(0, 0.96),
-            child: GestureDetector(
-              onTap: () {},
-              child: Text("Belum Punya Akun ? Daftar di Sini !",
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontSize: 16,
-                  )),
-            ),
-          )
         ],
       ),
     );

@@ -1,0 +1,27 @@
+{
+    "id": "32d76d19-8a05-4db0-9fc2-e0b0648fe9d0",
+    "attributes": {
+        "title": {
+            "en": "Solo Leveling"
+        },
+        "altTitles": [
+            {
+                "ja-ro": "To Be a Power in the Shadows!"
+            },
+            {
+                "ja": "陰の実力者になりたくて！"
+            }
+        ],
+        "lastChapter": "179",
+        "updatedAt": "2022-10-15T22:52:04+00:00"
+    },
+    "relationships": [
+        {
+            "id": "cb45e345-19e0-4619-8633-ae8359f60471",
+            "type": "cover_art",
+            "attributes": {
+                "fileName": "4d709522-25f5-4ac0-9b6c-3798a223c7ae.jpg"
+            }
+        }
+    ]
+}

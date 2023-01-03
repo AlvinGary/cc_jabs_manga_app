@@ -29,6 +29,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  cached_network_image: ^3.2.3
   cupertino_icons: ^1.0.2
   email_validator: ^2.1.17
   equatable: ^2.0.5
@@ -36,16 +37,23 @@ dependencies:
   firebase_core: ^2.4.0
   flutter:
     sdk: flutter
+  flutter_launcher_icons: ^0.11.0
   flutter_spinkit: ^5.1.0
   fluttertoast: ^8.1.2
   font_awesome_flutter: ^10.3.0
   google_sign_in: ^5.4.2
   http: ^0.13.5
+  lazy_loading_list: ^1.0.1
 
 dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/wow_icon.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
