@@ -8,6 +8,7 @@ import '../../shared/shared.dart';
 import '../pages/pages.dart';
 
 part 'uitoast.dart';
+part 'uicard.dart';
 part 'uiloading.dart';
 part 'popularcard.dart';
 part 'latestcard.dart';

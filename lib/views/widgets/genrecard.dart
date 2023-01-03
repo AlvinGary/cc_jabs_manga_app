@@ -45,9 +45,7 @@ class _GenreCardState extends State<GenreCard> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => DetailPage(
-                listComic.id.toString()
-              ),
+              builder: (context) => DetailPage(listComic.id.toString()),
             ),
           );
         },
