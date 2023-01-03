@@ -109,7 +109,7 @@ class _HomePageState extends State<HomePage> {
                       crossAxisCount: 1,
                       crossAxisSpacing: 3,
                       mainAxisSpacing: 3,
-                      childAspectRatio: 5 / 3),
+                      childAspectRatio: 1.7),
                   itemBuilder: (context, index) {
                     (listComic.length == 0)
                         ? print("data kosong")
@@ -190,7 +190,7 @@ class _HomePageState extends State<HomePage> {
                       crossAxisCount: 1,
                       crossAxisSpacing: 3,
                       mainAxisSpacing: 3,
-                      childAspectRatio: 17 / 4),
+                      childAspectRatio: 4.3),
                   itemBuilder: (context, index) {
                     (listComic.length == 0)
                         ? print("data kosong")

@@ -14,20 +14,239 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Search"),
+        title:
+            Text("Browse", style: TextStyle(color: Colors.black, fontSize: 20)),
       ),
-      body: Container(
-        padding: EdgeInsets.fromLTRB(16, 16, 16, 24),
-        child: TextField(
-          controller: searchController,
-          decoration: InputDecoration(
-            suffixIcon: const Icon(Icons.search),
-            hintText: "Search",
-            border: OutlineInputBorder(
-              borderSide: const BorderSide(
-                        color: Colors.black87, width: 2),
+      body: Scaffold(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  width: 200,
+                  height: 80,
+                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
+                  child: ElevatedButton(
+                      onPressed: () async {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ActionGenrePage()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          elevation: 5,
+                          shadowColor: Colors.black,
+                          textStyle: TextStyle(
+                              fontSize: 22,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          )),
+                      child: Text('Action')),
+                ),
+                Container(
+                  width: 200,
+                  height: 80,
+                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
+                  child: ElevatedButton(
+                      onPressed: () async {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AdventureGenrePage()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          elevation: 5,
+                          shadowColor: Colors.black,
+                          textStyle: TextStyle(
+                              fontSize: 22,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          )),
+                      child: Text('Adventure')),
+                ),
+              ],
             ),
-          ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  width: 200,
+                  height: 80,
+                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
+                  child: ElevatedButton(
+                      onPressed: () async {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ComedyGenrePage()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          elevation: 5,
+                          shadowColor: Colors.black,
+                          textStyle: TextStyle(
+                              fontSize: 22,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          )),
+                      child: Text('Comedy')),
+                ),
+                Container(
+                  width: 200,
+                  height: 80,
+                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
+                  child: ElevatedButton(
+                      onPressed: () async {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DramaGenrePage()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          elevation: 5,
+                          shadowColor: Colors.black,
+                          textStyle: TextStyle(
+                              fontSize: 22,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          )),
+                      child: Text('Drama')),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  width: 200,
+                  height: 80,
+                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
+                  child: ElevatedButton(
+                      onPressed: () async {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FantasyGenrePage()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          elevation: 5,
+                          shadowColor: Colors.black,
+                          textStyle: TextStyle(
+                              fontSize: 22,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          )),
+                      child: Text('Fantasy')),
+                ),
+                Container(
+                  width: 200,
+                  height: 80,
+                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
+                  child: ElevatedButton(
+                      onPressed: () async {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HaremGenrePage()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          elevation: 5,
+                          shadowColor: Colors.black,
+                          textStyle: TextStyle(
+                              fontSize: 22,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          )),
+                      child: Text('Harem')),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  width: 200,
+                  height: 80,
+                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
+                  child: ElevatedButton(
+                      onPressed: () async {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => IsekaiGenrePage()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          elevation: 5,
+                          shadowColor: Colors.black,
+                          textStyle: TextStyle(
+                              fontSize: 22,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          )),
+                      child: Text('Isekai')),
+                ),
+                Container(
+                  width: 200,
+                  height: 80,
+                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
+                  child: ElevatedButton(
+                      onPressed: () async {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SliceOfLifeGenrePage()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          elevation: 5,
+                          shadowColor: Colors.black,
+                          textStyle: TextStyle(
+                              fontSize: 20,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          )),
+                      child:
+                          Text('Slice Of Life', textAlign: TextAlign.center)),
+                ),
+              ],
+            ),
+            SizedBox(height: 12),
+          ],
         ),
       ),
     );
