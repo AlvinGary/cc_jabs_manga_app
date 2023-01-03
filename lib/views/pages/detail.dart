@@ -83,7 +83,9 @@ class _DetailPageState extends State<DetailPage> {
         title = value.attributes!.title!.en.toString() ??
             value.attributes!.title!.ja.toString() ??
             value.attributes!.title!.jaRo.toString();
-        
+        desc = value.attributes!.description!.en.toString();
+        status = value.attributes!.status.toString();
+        year = value.attributes!.year.toString();
       });
     });
     getRating().then((value) {
