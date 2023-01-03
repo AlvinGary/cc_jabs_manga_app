@@ -1,13 +1,10 @@
-import 'package:equatable/equatable.dart';
-
-import 'attributes1.dart';
-import 'relationship.dart';
+part of '../models.dart';
 
 class ComicDetail extends Equatable {
   final String? id;
   final String? type;
-  final Attributes1? attributes;
-  final List<Relationship>? relationships;
+  final attributesComicDetail.Attributes1? attributes;
+  final List<relationComicDetail.Relationship>? relationships;
 
   const ComicDetail({this.id, this.type, this.attributes, this.relationships});
 
@@ -16,9 +13,9 @@ class ComicDetail extends Equatable {
         type: json['type'] as String?,
         attributes: json['attributes'] == null
             ? null
-            : Attributes1.fromJson(json['attributes'] as Map<String, dynamic>),
+            : attributesComicDetail.Attributes1.fromJson(json['attributes'] as Map<String, dynamic>),
         relationships: (json['relationships'] as List<dynamic>?)
-            ?.map((e) => Relationship.fromJson(e as Map<String, dynamic>))
+            ?.map((e) => relationComicDetail.Relationship.fromJson(e as Map<String, dynamic>))
             .toList(),
       );
 

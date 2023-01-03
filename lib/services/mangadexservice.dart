@@ -60,7 +60,7 @@ class MangadexService {
       'includes[]': 'cover_art',
       'limit': '20',
       'offset': '${offset}',
-      'order[latestUploadedChapter]': 'desc',
+      'order[followedCount]': 'desc',
       'availableTranslatedLanguage[]': 'en',
       'hasAvailableChapters': 'true',
       'contentRating[]': 'safe',
@@ -87,7 +87,7 @@ class MangadexService {
       'includes[]': 'cover_art',
       'limit': '20',
       'offset': '${offset}',
-      'order[latestUploadedChapter]': 'desc',
+      'order[followedCount]': 'desc',
       'availableTranslatedLanguage[]': 'en',
       'hasAvailableChapters': 'true',
       'contentRating[]': 'safe',
@@ -114,7 +114,7 @@ class MangadexService {
       'includes[]': 'cover_art',
       'limit': '20',
       'offset': '${offset}',
-      'order[latestUploadedChapter]': 'desc',
+      'order[followedCount]': 'desc',
       'availableTranslatedLanguage[]': 'en',
       'hasAvailableChapters': 'true',
       'contentRating[]': 'safe',
@@ -141,7 +141,7 @@ class MangadexService {
       'includes[]': 'cover_art',
       'limit': '20',
       'offset': '${offset}',
-      'order[latestUploadedChapter]': 'desc',
+      'order[followedCount]': 'desc',
       'availableTranslatedLanguage[]': 'en',
       'hasAvailableChapters': 'true',
       'contentRating[]': 'safe',
@@ -168,7 +168,7 @@ class MangadexService {
       'includes[]': 'cover_art',
       'limit': '20',
       'offset': '${offset}',
-      'order[latestUploadedChapter]': 'desc',
+      'order[followedCount]': 'desc',
       'availableTranslatedLanguage[]': 'en',
       'hasAvailableChapters': 'true',
       'contentRating[]': 'safe',
@@ -195,7 +195,7 @@ class MangadexService {
       'includes[]': 'cover_art',
       'limit': '20',
       'offset': '${offset}',
-      'order[latestUploadedChapter]': 'desc',
+      'order[followedCount]': 'desc',
       'availableTranslatedLanguage[]': 'en',
       'hasAvailableChapters': 'true',
       'contentRating[]': 'safe',
@@ -222,7 +222,7 @@ class MangadexService {
       'includes[]': 'cover_art',
       'limit': '20',
       'offset': '${offset}',
-      'order[latestUploadedChapter]': 'desc',
+      'order[followedCount]': 'desc',
       'availableTranslatedLanguage[]': 'en',
       'hasAvailableChapters': 'true',
       'contentRating[]': 'safe',
@@ -249,7 +249,7 @@ class MangadexService {
       'includes[]': 'cover_art',
       'limit': '20',
       'offset': '${offset}',
-      'order[latestUploadedChapter]': 'desc',
+      'order[followedCount]': 'desc',
       'availableTranslatedLanguage[]': 'en',
       'hasAvailableChapters': 'true',
       'contentRating[]': 'safe',
@@ -268,6 +268,36 @@ class MangadexService {
       return listComic;
     } else {
       throw Exception('Failed to load list comic');
+    }
+  }
+
+  static Future<ComicDetail> getComicDetail(String id) async {
+    var query = {
+      'includes[]': ['cover_art', 'author', 'artist', 'tag']
+    };
+    var url = Uri.http(baseUrl, '/manga/${id}', query);
+    var response = await http.get(url);
+    var data = jsonDecode(response.body);
+    ComicDetail comicDetail = new ComicDetail();
+    if (data['result'] == 'ok') {
+      comicDetail = ComicDetail.fromJson(data['data']);
+      return comicDetail;
+    } else {
+      throw Exception('Failed to load comic detail');
+    }
+  }
+
+  static Future<Rating> getComicRating(String id) async {
+    var url = Uri.http(baseUrl, '/statistics/manga/${id}');
+    var response = await http.get(url);
+    var data = jsonDecode(response.body);
+    Rating rating = new Rating();
+    if (data['result'] == 'ok') {
+      rating =
+          Rating.fromJson(data['statistics']['${id.toString()}']['rating']);
+      return rating;
+    } else {
+      throw Exception('Failed to load comic rating');
     }
   }
 }

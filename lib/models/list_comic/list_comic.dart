@@ -2,8 +2,8 @@ part of '../models.dart';
 
 class ListComic extends Equatable {
   final String? id;
-  final Attributes1? attributes;
-  final List<Relationship>? relationships;
+  final attributeslistcomic.Attributes1? attributes;
+  final List<relationlistcomic.Relationship>? relationships;
 
   const ListComic({this.id, this.attributes, this.relationships});
 
@@ -11,9 +11,9 @@ class ListComic extends Equatable {
         id: json['id'] as String?,
         attributes: json['attributes'] == null
             ? null
-            : Attributes1.fromJson(json['attributes'] as Map<String, dynamic>),
+            : attributeslistcomic.Attributes1.fromJson(json['attributes'] as Map<String, dynamic>),
         relationships: (json['relationships'] as List<dynamic>?)
-            ?.map((e) => Relationship.fromJson(e as Map<String, dynamic>))
+            ?.map((e) => relationlistcomic.Relationship.fromJson(e as Map<String, dynamic>))
             .toList(),
       );
 

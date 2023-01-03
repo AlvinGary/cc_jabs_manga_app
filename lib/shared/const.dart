@@ -18,4 +18,3 @@ const String sv = "97893a4c-12af-4dac-b6be-0dffb353568e";
 const String baseUrl = "api.mangadex.org";
 const String baseImageUrl = "uploads.mangadex.org";
 const String coverUrl = "$baseImageUrl/covers";
-const String pageUrl = "$baseImageUrl/data";
