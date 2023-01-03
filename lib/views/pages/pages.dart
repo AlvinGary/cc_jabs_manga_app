@@ -8,6 +8,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:lazy_loading_list/lazy_loading_list.dart';
 
 import '../../models/models.dart';
 
@@ -18,4 +19,13 @@ part 'popular.dart';
 part 'latest.dart';
 part 'search.dart';
 part 'library.dart';
-part 'navbarview.dart';
+part 'menu.dart';
+part 'profile.dart';
+part 'actiongenre.dart';
+part 'adventuregenre.dart';
+part 'comedygenre.dart';
+part 'dramagenre.dart';
+part 'fantasygenre.dart';
+part 'haremgenre.dart';
+part 'isekaigenre.dart';
+part 'sliceoflifegenre.dart';
