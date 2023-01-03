@@ -2,7 +2,7 @@ part of '../models.dart';
 
 class ListChapter extends Equatable {
   final String? id;
-  final Attributes? attributes;
+  final attributeslistchapter.Attributes? attributes;
   final List<relationlistchapter.Relationship>? relationships;
 
   const ListChapter({this.id, this.attributes, this.relationships});
@@ -11,7 +11,7 @@ class ListChapter extends Equatable {
         id: json['id'] as String?,
         attributes: json['attributes'] == null
             ? null
-            : Attributes.fromJson(json['attributes'] as Map<String, dynamic>),
+            : attributeslistchapter.Attributes.fromJson(json['attributes'] as Map<String, dynamic>),
         relationships: (json['relationships'] as List<dynamic>?)
             ?.map((e) => relationlistchapter.Relationship.fromJson(
                 e as Map<String, dynamic>))

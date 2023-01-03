@@ -8,29 +8,43 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<ListComic> listComic = [];
+  List<ListComic> popularlist = [];
+  List<ListComic> latestlist = [];
   int offset = 0;
 
-  Future<List<ListComic>> fetchListComic(offset) async {
+  Future<List<ListComic>> fetchPopularList(offset) async {
     await MangadexService.getListPopularComic(offset).then((value) {
       if (value.isNotEmpty) {
         setState(() {
-          listComic.addAll(value);
+          popularlist.addAll(value);
         });
       }
     });
-    return listComic;
+    return popularlist;
+  }
+
+  Future<List<ListComic>> fetchLatestList(offset) async {
+    await MangadexService.getListLatestComic(offset).then((value) {
+      if (value.isNotEmpty) {
+        setState(() {
+          latestlist.addAll(value);
+        });
+      }
+    });
+    return latestlist;
   }
 
   @override
   void initState() {
-    fetchListComic(offset);
+    fetchPopularList(offset);
+    fetchLatestList(offset);
     super.initState();
   }
 
   @override
   void dispose() {
-    listComic.clear();
+    popularlist.clear();
+    latestlist.clear();
     super.dispose();
   }
 
@@ -77,53 +91,29 @@ class _HomePageState extends State<HomePage> {
             SizedBox(height: 6),
             // show popular comic
             Container(
-              width: double.infinity,
-              height: 200,
-              child: NotificationListener<ScrollEndNotification>(
-                onNotification: (scrollEnd) {
-                  final metrics = scrollEnd.metrics;
-                  if (metrics.atEdge) {
-                    bool isTop = metrics.pixels == 0;
-                    if (isTop) {
-                      print('At the top');
-                      setState(() {
-                        listComic.clear();
-                        offset = 0;
-                        fetchListComic(offset);
-                      });
-                    } else {
-                      print('At the bottom');
-                      setState(() {
-                        offset += 20;
-                        fetchListComic(offset);
-                      });
-                    }
-                  }
-                  return true;
-                },
+                width: double.infinity,
+                height: 300,
                 child: GridView.builder(
-                  itemCount: listComic.length,
+                  itemCount: popularlist.length,
                   scrollDirection: Axis.horizontal,
                   padding: EdgeInsets.all(10),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 1,
-                      crossAxisSpacing: 3,
-                      mainAxisSpacing: 3,
-                      childAspectRatio: 1.7),
+                      childAspectRatio: 2 / 1),
                   itemBuilder: (context, index) {
-                    (listComic.length == 0)
+                    (popularlist.length == 0)
                         ? print("data kosong")
                         : print("data ada");
                     return LazyLoadingList(
                       loadMore: () {},
-                      child: PopularCardView(listComic[index]),
+                      child: PopularCardView(popularlist[index]),
                       index: index,
                       hasMore: true,
                     );
                   },
                 ),
               ),
-            ),
+            
             SizedBox(height: 6),
             Divider(thickness: 2, color: Colors.black),
             Row(
@@ -157,51 +147,45 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(height: 4),
             // show latest update
-            Container(
-              width: double.infinity,
-              height: 200,
-              child: NotificationListener<ScrollEndNotification>(
-                onNotification: (scrollEnd) {
-                  final metrics = scrollEnd.metrics;
-                  if (metrics.atEdge) {
-                    bool isTop = metrics.pixels == 0;
-                    if (isTop) {
-                      print('At the top');
-                      setState(() {
-                        listComic.clear();
-                        offset = 0;
-                        fetchListComic(offset);
-                      });
-                    } else {
-                      print('At the bottom');
-                      setState(() {
-                        offset += 20;
-                        fetchListComic(offset);
-                      });
+            Expanded(
+              child: Container(
+                width: double.infinity,
+                height: double.infinity,
+                child: NotificationListener<ScrollEndNotification>(
+                  onNotification: (scrollEnd) {
+                    final metrics = scrollEnd.metrics;
+                    if (metrics.atEdge) {
+                      bool isTop = metrics.pixels == 0;
+                      if (isTop) {
+                        print('At the top');
+                        setState(() {
+                          latestlist.clear();
+                          offset = 0;
+                          fetchLatestList(offset);
+                        });
+                      }
                     }
-                  }
-                  return true;
-                },
-                child: GridView.builder(
-                  itemCount: listComic.length,
-                  scrollDirection: Axis.vertical,
-                  padding: EdgeInsets.all(6),
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 1,
-                      crossAxisSpacing: 3,
-                      mainAxisSpacing: 3,
-                      childAspectRatio: 4.3),
-                  itemBuilder: (context, index) {
-                    (listComic.length == 0)
-                        ? print("data kosong")
-                        : print("data ada");
-                    return LazyLoadingList(
-                      loadMore: () {},
-                      child: LatestCardHome(listComic[index]),
-                      index: index,
-                      hasMore: true,
-                    );
+                    return true;
                   },
+                  child: GridView.builder(
+                    itemCount: latestlist.length,
+                    scrollDirection: Axis.vertical,
+                    padding: EdgeInsets.all(6),
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 1,
+                        childAspectRatio: 17 / 4),
+                    itemBuilder: (context, index) {
+                      (latestlist.length == 0)
+                          ? print("data kosong")
+                          : print("data ada");
+                      return LazyLoadingList(
+                        loadMore: () {},
+                        child: LatestCardHome(latestlist[index]),
+                        index: index,
+                        hasMore: false,
+                      );
+                    },
+                  ),
                 ),
               ),
             ),

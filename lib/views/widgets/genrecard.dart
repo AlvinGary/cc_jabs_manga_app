@@ -40,7 +40,17 @@ class _GenreCardState extends State<GenreCard> {
         borderRadius: BorderRadius.circular(12),
       ),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          print(listComic.id);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => DetailPage(
+                listComic.id.toString()
+              ),
+            ),
+          );
+        },
         child: Container(
           padding: EdgeInsets.fromLTRB(8, 10, 8, 0),
           color: Colors.orange,
