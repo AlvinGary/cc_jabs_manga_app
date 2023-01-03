@@ -36,7 +36,17 @@ class _LatestCardHomeState extends State<LatestCardHome> {
       elevation: 5,
       color: Colors.orange,
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          print(listComic.id);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => DetailPage(
+                listComic.id.toString()
+              ),
+            ),
+          );
+        },
         child: ListTile(
           contentPadding: const EdgeInsets.fromLTRB(12, 4, 0, 2),
           leading: CachedNetworkImage(

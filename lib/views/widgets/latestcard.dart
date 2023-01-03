@@ -39,7 +39,17 @@ class _LatestCardViewState extends State<LatestCardView> {
           borderRadius: BorderRadius.circular(10),
         ),
         child: InkWell(
-          onTap: () {},
+          onTap: () {
+          print(listComic.id);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => DetailPage(
+                listComic.id.toString()
+              ),
+            ),
+          );
+        },
           child: Container(
               padding: EdgeInsets.fromLTRB(8, 10, 8, 0),
               color: Colors.orange,

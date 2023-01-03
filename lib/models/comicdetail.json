@@ -1,70 +1,382 @@
 {
+    "result": "ok",
+    "response": "entity",
     "data": {
-        "id": "77bee52c-d2d6-44ad-a33a-1734c1fe696a",
+        "id": "ec514ef4-fb77-43b9-b9b4-528229de1308",
         "type": "manga",
         "attributes": {
             "title": {
-                "ja-ro": "Kage no Jitsuryokusha ni Naritakute"
+                "en": "Fire Force"
             },
             "altTitles": [
                 {
-                    "en": "The Eminence in Shadow"
+                    "id": "Korps Pemadam Kebakaran"
                 },
                 {
-                    "en": "To Be a Power in the Shadows!"
+                    "es": "La brigada de bomberos de las llamas"
                 },
                 {
-                    "ru": "Восхождение в тени"
+                    "ru": "Пламенная бригада пожарных"
                 },
                 {
-                    "ja": "陰の実力者になりたくて！"
+                    "th": "หน่วยผจญคนไฟลุก"
                 },
                 {
-                    "ko": "숨은 실력자가 되고싶어서"
+                    "ja": "炎炎ノ消防隊"
+                },
+                {
+                    "zh-hk": "炎炎消防隊"
+                },
+                {
+                    "ko": "장장 노 소방대"
+                },
+                {
+                    "ja-ro": "En'en no Shōbō-tai"
                 }
             ],
             "description": {
-                "en": "Just like how everyone adored heroes in their childhood, a certain young man adored those powers hidden in shadows. Ninjas, rogues, shadowy mentor types, that sort of deal.  \r\nAfter hiding his strength and living the mediocre life of a NPC by day while undergoing frenzied training by night, he finally reincarnates into a different world and gains ultimate power.  \r\nThe young man who is only pretending to be a power in the shadows… his subordinates who took him more seriously than he expected… and a giant organization in the shadows that gets accidentally trampled…  \r\nThis is the story of a young boy who had adored powers in shadows possibly eventually reigning over the world of shadows in another world."
+                "en": "The city of Tokyo is plagued by a deadly phenomenon: spontaneous human combustion! Luckily, a special team is there to quench the inferno: The Fire Force! The fire soldiers at Special Fire Cathedral 8 are about to get a unique addition. Enter Shinra, a boy who possesses the power to run at the speed of a rocket, leaving behind the famous “devil’s footprints” (and destroying his shoes in the process). Can Shinra and his colleagues discover the source of this strange epidemic before the city burns to ashes?",
+                "ja": "全人類は怯えていた──。何の変哲もない人が突如燃え出し、炎の怪物“焔ビト”となって、破壊の限りを尽くす“人体発火現象”。炎の恐怖に立ち向かう特殊消防隊は、現象の謎を解明し、人類を救うことが使命！とある理由から“悪魔”と呼ばれる、新入隊員の少年・シンラは、“ヒーロー”を目指し、仲間たちと共に、“焔ビト”との戦いの日々に身を投じる!!  燃え上がるバル・ファンタジー、始動!!",
+                "pt": "No mundo de En En, estão acontecendo tenebrosos fenômenos onde as pessoas simplesmente se tornam monstros após serem incendiadas DO NADA! Para combater essa situação foram criadas as brigadas de incêndio especiais que enfrentam tais criaturas flamejantes, trazendo paz às suas almas. O protagonista, Shinra, é um desses \"bombeiros\", no entanto, existe um pequeno detalhe sobre Shinra… Ele também é um desses monstros os quais \"pegaram fogo\".",
+                "ru": "Люди стали очень часто умирать от самовозгорания. Причины этого феномена неизвестны. К тому же, люди не просто умирают, а превращаются в огнелюдей — безмозглых монстров, которые становятся причиной ещё больших пожаров. Для борьбы с ними были созданы несколько пожарных отрядов, которые, кроме ликвидации огнелюдей, пытаются выяснить, из-за чего это всё происходит. Именно к одному из таких отрядов и присоединяется главный герой — Кусакабэ Шинра. По некоторым причинам его считают повинным в смерти собственной семьи, и чтобы доказать обратное, он хочет стать героем, которого будут уважать и не бояться. Постепенно набираясь опыта, обретая новых друзей, Шинра вместе с членами его отряда будет пробиваться через все преграды, чтобы раскрыть зловещую тайну феномена самовозгорания…  \r\n\r\n\r\n---\r\n\r\n**Links:**  \r\n- [Author's Twitter](https://twitter.com/Atsushi_Ohkubo)"
             },
-            "status": "ongoing",
-            "year": 2018,
+            "isLocked": false,
+            "links": {
+                "al": "86310",
+                "ap": "fire-force",
+                "bw": "series/61854",
+                "kt": "36201",
+                "mu": "126173",
+                "amz": "https://www.amazon.co.jp/dp/B08JV3NMPR",
+                "cdj": "https://www.cdjapan.co.jp/product/NEOBK-2635537",
+                "ebj": "https://ebookjapan.yahoo.co.jp/books/347010",
+                "mal": "91037",
+                "raw": "https://pocket.shonenmagazine.com/episode/13932016480029109829",
+                "engtl": "https://comics.inkr.com/title/387-fire-force?utm_source=mgd"
+            },
+            "originalLanguage": "ja",
+            "lastVolume": "34",
+            "lastChapter": "304",
+            "publicationDemographic": "shounen",
+            "status": "completed",
+            "year": 2015,
+            "contentRating": "suggestive",
             "tags": [
                 {
+                    "id": "0bc90acb-ccc1-44ca-a34a-b9f3a73259d0",
+                    "type": "tag",
                     "attributes": {
                         "name": {
                             "en": "Reincarnation"
-                        }
-                    }
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
                 },
                 {
+                    "id": "256c8bd9-4904-4360-bf4f-508a76d67183",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Sci-Fi"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "36fd93ea-e8b8-445e-b836-358f02b3d33d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Monsters"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+                    "type": "tag",
                     "attributes": {
                         "name": {
                             "en": "Action"
-                        }
-                    }
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "39730448-9a5f-48a2-85b0-a70db87b1233",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Demons"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Psychological"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Comedy"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "5ca48985-9a9d-4bd8-be29-80dc0303db72",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Crime"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "7064a261-a137-4d3a-8848-2d385de3a99c",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Superhero"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "799c202e-7daa-44eb-9cf7-8a3c0441531e",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Martial Arts"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "9467335a-1b83-4497-9231-765337a00b96",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Post-Apocalyptic"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "ac72833b-c4e9-4878-b9db-6c8a4a99444a",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Military"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Drama"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "cdad7e68-1419-41dd-bdce-27753074a640",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Horror"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Slice of Life"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Supernatural"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "ee968100-4191-4968-93d3-f82d72be7e46",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Mystery"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
                 }
-            ]
+            ],
+            "state": "published",
+            "chapterNumbersResetOnNewVolume": false,
+            "createdAt": "2018-11-19T03:10:57+00:00",
+            "updatedAt": "2022-11-04T04:53:04+00:00",
+            "version": 51,
+            "availableTranslatedLanguages": [
+                "it",
+                "es-la",
+                "es",
+                "en",
+                "ru",
+                "pt-br",
+                "fr",
+                "ar",
+                "vi",
+                "de",
+                "uk"
+            ],
+            "latestUploadedChapter": "120b09d3-9cf6-4afe-bd0e-7afc819b5630"
         },
         "relationships": [
             {
-                "id": "c6c278e1-268b-4b7b-84ec-3289bd0c08f0",
-                "type": "author"
-            },
-            {
-                "id": "a1746c35-50ed-4e6f-94c1-092b07440d59",
-                "type": "artist"
-            },
-            {
-                "id": "c659e82a-8730-4fcd-8755-772dbce479ce",
-                "type": "cover_art",
+                "id": "9f9e2ead-f5ad-4cf5-82b6-bca7a6287247",
+                "type": "author",
                 "attributes": {
-                    "fileName": "4d709522-25f5-4ac0-9b6c-3798a223c7ae.jpg"
+                    "name": "Atsushi Ookubo",
+                    "imageUrl": null,
+                    "biography": {},
+                    "twitter": null,
+                    "pixiv": null,
+                    "melonBook": null,
+                    "fanBox": null,
+                    "booth": null,
+                    "nicoVideo": null,
+                    "skeb": null,
+                    "fantia": null,
+                    "tumblr": null,
+                    "youtube": null,
+                    "weibo": null,
+                    "naver": null,
+                    "website": null,
+                    "createdAt": "2021-04-19T21:59:45+00:00",
+                    "updatedAt": "2022-01-16T00:08:59+00:00",
+                    "version": 2
                 }
             },
             {
-                "id": "fc4eede2-4fc9-4fdc-8904-7ea7ae56d773",
+                "id": "9f9e2ead-f5ad-4cf5-82b6-bca7a6287247",
+                "type": "artist",
+                "attributes": {
+                    "name": "Atsushi Ookubo",
+                    "imageUrl": null,
+                    "biography": [],
+                    "twitter": null,
+                    "pixiv": null,
+                    "melonBook": null,
+                    "fanBox": null,
+                    "booth": null,
+                    "nicoVideo": null,
+                    "skeb": null,
+                    "fantia": null,
+                    "tumblr": null,
+                    "youtube": null,
+                    "weibo": null,
+                    "naver": null,
+                    "website": null,
+                    "createdAt": "2021-04-19T21:59:45+00:00",
+                    "updatedAt": "2022-01-16T00:08:59+00:00",
+                    "version": 2
+                }
+            },
+            {
+                "id": "b2d88df1-cd1e-49e6-a253-b14b1e80f4c7",
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": "34",
+                    "fileName": "f395b9a0-b6f0-4b16-bf3c-2bdbdd9a5c54.jpg",
+                    "locale": "ja",
+                    "createdAt": "2022-04-30T12:56:56+00:00",
+                    "updatedAt": "2022-04-30T12:56:56+00:00",
+                    "version": 1
+                }
+            },
+            {
+                "id": "53ef1720-7a5d-40ad-90b0-2f9ca0a1ab01",
                 "type": "manga",
-                "related": "side_story"
+                "related": "sequel"
+            },
+            {
+                "id": "5e6fc7ba-5af9-4f74-b439-9c487b6f635b",
+                "type": "manga",
+                "related": "colored"
             }
         ]
     }
