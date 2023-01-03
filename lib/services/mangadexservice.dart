@@ -55,9 +55,6 @@ class MangadexService {
     }
   }
 
-<<<<<<< HEAD
-  static Future<List<ComicDetail>> getDetailsComic(int offset) async {}
-=======
   static Future<List<ListComic>> getComedyComic(int offset) async {
     Map<String, dynamic> query = {
       'includes[]': 'cover_art',
@@ -303,5 +300,4 @@ class MangadexService {
       throw Exception('Failed to load comic rating');
     }
   }
->>>>>>> 01f278ecc4d7869ddc110d12ef97f994feae9696
 }

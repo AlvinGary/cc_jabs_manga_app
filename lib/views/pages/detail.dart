@@ -99,37 +99,82 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Detail"),
-        ),
-        body: Stack(
-          children: [
+      appBar: AppBar(
+        title: Text("Detail"),
+      ),
+      body: Container(
+        padding: EdgeInsets.fromLTRB(20, 0, 10, 0),
+        height: double.infinity,
+        width: double.infinity,
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(
-                height: double.infinity,
-                width: double.infinity,
-                child: Column(
-                  children: [
-                    Flexible(
-                      child: CachedNetworkImage(
-                        imageUrl: 'https://$image',
-                        placeholder: (context, url) => UiLoading.loading(),
-                        errorWidget: (context, url, error) => Icon(Icons.error),
-                      ),
+              width: double.infinity,
+              child: Row(
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CachedNetworkImage(
+                    width: 100,
+                    height: 200,
+                    imageUrl: 'https://$image',
+                    placeholder: (context, url) => UiLoading.loading(),
+                    errorWidget: (context, url, error) => Icon(Icons.error),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 200,
+                          child: Text(
+                            title ?? altTitle ?? "No Title",
+                            style: TextStyle(
+                                fontSize: 23, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Text(author ?? "No Author"),
+                        Text(artist ?? "No Artist"),
+                        Text(""),
+                        Text(
+                          rating ?? "No Rating",
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold),
+                        ),
+                      ],
                     ),
-                    Text(title ?? altTitle ?? "No Title"),
-                    Text(author ?? "No Author"),
-                    Text(artist ?? "No Artist"),
-                    Text(rating ?? "No Rating"),
-                    Wrap(
-                      children: tag
-                          .map((e) => UIChips.chip(e, Colors.grey))
-                          .toList(),
-                          spacing: 10,
-                    )
-                  ],
-                )),
-            isLoading ? UiLoading.loadingBlock() : Container(),
-          ],
-        ));
+                  ),
+                ],
+              ),
+            ),
+            Wrap(
+              direction: Axis.horizontal,
+              children: tag.map((e) => UIChips.chip(e, Colors.grey)).toList(),
+              spacing: 3,
+              runSpacing: 5,
+            ),
+            Text(
+              "Summary",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.left,
+            ),
+            Text(
+              desc ?? "No Desc",
+              maxLines: 20,
+            ),
+            Text(""),
+            Text(
+              "Chapter",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.left,
+            ),
+            Text(widget.manga_id)
+          ]),
+        ),
+      ),
+    );
   }
 }
