@@ -3,7 +3,7 @@ part of 'widgets.dart';
 class UIChips {
   static Widget chip(String text, Color color) {
     return Chip(
-      labelPadding: EdgeInsets.all(2.0),
+      labelPadding: EdgeInsets.all(1.0),
       // avatar: CircleAvatar(
       //   backgroundColor: Colors.white70,
       //   child: Text(text[0].toUpperCase()),
@@ -11,13 +11,14 @@ class UIChips {
       label: Text(
         text,
         style: TextStyle(
+          fontSize: 12,
           color: Colors.white,
         ),
       ),
       backgroundColor: color,
       elevation: 6.0,
       shadowColor: Colors.grey[60],
-      padding: EdgeInsets.all(8.0),
+      padding: EdgeInsets.all(3.0),
     );
   }
 }
