@@ -152,7 +152,7 @@ class _DetailPageState extends State<DetailPage> {
             ),
             Wrap(
               direction: Axis.horizontal,
-              children: tag.map((e) => UIChips.chip(e, Colors.grey)).toList(),
+              children: tag.map((e) => UIChips.chip(e, Colors.orange)).toList(),
               spacing: 3,
               runSpacing: 5,
             ),
@@ -171,7 +171,11 @@ class _DetailPageState extends State<DetailPage> {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               textAlign: TextAlign.left,
             ),
-            Text(widget.manga_id)
+            Text(
+              "Coming Soon",
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.grey),
+            )
           ]),
         ),
       ),
