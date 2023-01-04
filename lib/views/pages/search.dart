@@ -25,9 +25,8 @@ class _SearchPageState extends State<SearchPage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  width: 200,
+                  width: 150,
                   height: 80,
-                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
                   child: ElevatedButton(
                       onPressed: () async {
                         Navigator.push(
@@ -40,19 +39,17 @@ class _SearchPageState extends State<SearchPage> {
                           elevation: 5,
                           shadowColor: Colors.black,
                           textStyle: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
-                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
                           )),
                       child: Text('Action')),
                 ),
                 Container(
-                  width: 200,
+                  width: 150,
                   height: 80,
-                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
                   child: ElevatedButton(
                       onPressed: () async {
                         Navigator.push(
@@ -65,10 +62,9 @@ class _SearchPageState extends State<SearchPage> {
                           elevation: 5,
                           shadowColor: Colors.black,
                           textStyle: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
-                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
                           )),
@@ -81,9 +77,8 @@ class _SearchPageState extends State<SearchPage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  width: 200,
+                  width: 150,
                   height: 80,
-                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
                   child: ElevatedButton(
                       onPressed: () async {
                         Navigator.push(
@@ -96,19 +91,17 @@ class _SearchPageState extends State<SearchPage> {
                           elevation: 5,
                           shadowColor: Colors.black,
                           textStyle: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
-                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
                           )),
                       child: Text('Comedy')),
                 ),
                 Container(
-                  width: 200,
+                  width: 150,
                   height: 80,
-                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
                   child: ElevatedButton(
                       onPressed: () async {
                         Navigator.push(
@@ -121,10 +114,9 @@ class _SearchPageState extends State<SearchPage> {
                           elevation: 5,
                           shadowColor: Colors.black,
                           textStyle: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
-                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
                           )),
@@ -137,9 +129,8 @@ class _SearchPageState extends State<SearchPage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  width: 200,
+                  width: 150,
                   height: 80,
-                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
                   child: ElevatedButton(
                       onPressed: () async {
                         Navigator.push(
@@ -152,19 +143,17 @@ class _SearchPageState extends State<SearchPage> {
                           elevation: 5,
                           shadowColor: Colors.black,
                           textStyle: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
-                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
                           )),
                       child: Text('Fantasy')),
                 ),
                 Container(
-                  width: 200,
+                  width: 150,
                   height: 80,
-                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
                   child: ElevatedButton(
                       onPressed: () async {
                         Navigator.push(
@@ -177,10 +166,9 @@ class _SearchPageState extends State<SearchPage> {
                           elevation: 5,
                           shadowColor: Colors.black,
                           textStyle: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
-                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
                           )),
@@ -193,9 +181,8 @@ class _SearchPageState extends State<SearchPage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  width: 200,
+                  width: 150,
                   height: 80,
-                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
                   child: ElevatedButton(
                       onPressed: () async {
                         Navigator.push(
@@ -208,19 +195,17 @@ class _SearchPageState extends State<SearchPage> {
                           elevation: 5,
                           shadowColor: Colors.black,
                           textStyle: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
-                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
                           )),
                       child: Text('Isekai')),
                 ),
                 Container(
-                  width: 200,
+                  width: 150,
                   height: 80,
-                  padding: EdgeInsets.fromLTRB(24, 4, 24, 4),
                   child: ElevatedButton(
                       onPressed: () async {
                         Navigator.push(
@@ -233,10 +218,9 @@ class _SearchPageState extends State<SearchPage> {
                           elevation: 5,
                           shadowColor: Colors.black,
                           textStyle: TextStyle(
-                              fontSize: 20,
+                              fontSize: 18,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
-                          padding: EdgeInsets.fromLTRB(24, 10, 24, 10),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
                           )),
